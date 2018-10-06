@@ -51,4 +51,14 @@ public class MemoryBookService implements BookService {
         }
         return null;
     }
+
+    @Override
+    public void update(Book book) {
+        for (int i=0; i<this.list.size(); i++) {
+            if (this.list.get(i).getId() == book.getId()) {
+                this.list.add(i, book);
+                break;
+            }
+        }
+    }
 }
