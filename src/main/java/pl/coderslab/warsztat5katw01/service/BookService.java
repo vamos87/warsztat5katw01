@@ -10,4 +10,6 @@ public interface BookService {
     void deleteById(int id);
 
     void insert(Book book);
+
+    Book getById(int id);
 }
